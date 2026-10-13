@@ -1,8 +1,8 @@
 ITUS102 - PRACTICAL EXAMINATION | DEBUGGING AND IMPLEMENTATION REPORT
 Date: 13-10-2026 | Task 02 - Library Late-Return Fine Calculator
 
-Enrollment No.: <your enrollment no.>
-Name: <your name>
+Enrollment No.: 26CE093
+Name: Aadi Bhaveshkumar shah
 
 SIMPLE BUGS (write a brief explanation for each)
 Bug | Original problem | Correction made | Why required
@@ -32,4 +32,4 @@ Mobile layout checked (Yes/No): Yes
 
 GIT VERSION CONTROL
 git log -1 --oneline output: <paste output after you commit>
-GitHub URL (if available): <your repo URL>
+GitHub URL (if available):https://github.com/aadi-1811/WTF-PRACTICAL-TASK.git
