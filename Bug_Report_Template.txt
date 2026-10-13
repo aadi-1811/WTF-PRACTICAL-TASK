@@ -1,0 +1,35 @@
+ITUS102 - PRACTICAL EXAMINATION | DEBUGGING AND IMPLEMENTATION REPORT
+Date: 13-10-2026 | Task 02 - Library Late-Return Fine Calculator
+
+Enrollment No.: <your enrollment no.>
+Name: <your name>
+
+SIMPLE BUGS (write a brief explanation for each)
+Bug | Original problem | Correction made | Why required
+S1  | Nav link href was "#calcuator" (spelling mistake) | Changed to href="#calculator" | Anchor must match the section id="calculator", otherwise it does not scroll
+S2  | Footer used a generic <div class="site-footer"> | Replaced with <footer class="site-footer"> (content unchanged) | Semantic HTML5 element for site information; better accessibility/SEO
+S3  | "background-color #f1f6f9;" had no colon | Changed to "background-color: #f1f6f9;" | CSS declarations need property: value syntax, else the rule is ignored
+S4  | CSS used class selector ".pageTitle" but HTML has id="pageTitle" | Changed selector to "#pageTitle" | ID is selected with #, class with .
+S5  | Late days were read as Number(value) - 1 | Removed the "- 1" | It under-counted late days and gave a wrong fine
+S6  | processingCharge was 100 | Changed to 10 | Policy states processing charge is Rs.10
+
+CODE COMPLETION / IMPLEMENTATION (briefly state what was completed)
+M1: Added <meta charset="UTF-8"> and <meta name="viewport" content="width=device-width, initial-scale=1.0"> in <head>.
+M2: Added <aside class="notice"> with <h2>Important Note</h2> and a sentence reminding users to check the entered values.
+M3: .nav-links given display:flex; justify-content:space-between.
+M4: .cards given display:grid; grid-template-columns:1fr 1fr (two equal columns).
+M5: In @media (max-width:600px): .cards { grid-template-columns:1fr; } and .nav-links { flex-direction:column; }.
+M6: calculateFine returns days * books * rate.
+D1: chooseRate uses if / else if / else: Student=5, Staff=3, else (Visitor)=10.
+D2: calculateTotal returns 0 if fine <= 0, otherwise fine + processingCharge.
+D3: buildBreakdown uses a for loop (day = 1 to days) appending "Day N: cumulative fine = Rs.(N*books*rate)" per line; shows a message when days = 0.
+
+FUNCTIONAL TEST
+Test input: 5 late days; 2 books; Student
+Observed result: Rate: Rs.5 | Basic fine: Rs.50 | Total including applicable processing charge: Rs.60
+                 Day 1: Rs.10, Day 2: Rs.20, Day 3: Rs.30, Day 4: Rs.40, Day 5: Rs.50 (cumulative fine after day 5 = Rs.50)
+Mobile layout checked (Yes/No): Yes
+
+GIT VERSION CONTROL
+git log -1 --oneline output: <paste output after you commit>
+GitHub URL (if available): <your repo URL>
